@@ -3,679 +3,298 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shopping website with crazy features</title>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Shopping cart_page</title>
     <style>
-
-        .material-symbols-outlined {
-        font-variation-settings:
-        'FILL' 0,
-        'wght' 400,
-        'GRAD' 0,
-        'opsz' 48
-        }
-        
-        #searc{
-            font-size: 42px;
-            color:rgb(205, 18, 234);
-            cursor: pointer;
-            text-shadow: 2px 2px 4px rgb(205, 18, 234);
-        }
-        a{
-            border: none;
-            list-style: none;
-            text-decoration: none;
-        }
-        #desi{
-            color:rgb(205, 18, 234);
-            border: none;
-        }
-        #searc_1
-        {
-            font-size: 42px;
-            transition: all .5s;
-            cursor: pointer;
-            color:rgb(205, 18, 234);
-            text-shadow: 2px 2px 4px rgb(205, 18, 234);
-        }
-        #shop_cart{
-            font-size: 42px;
-            transition: all .5s;
-            cursor: pointer;
-            z-index: 100;
-            color:rgb(205, 18, 234);
-            text-shadow: 2px 2px 4px yellow;
-        }
-        #inpser{
-            border: none;
-            outline: none;
-            width: 300px;
-            text-align: center;
-            font-size: 24px;
-            text-transform: capitalize;
-            height: 40px;
-            margin-left: 10px;
-            margin-top: 5px;
-            color:black;
-            border-bottom: 1px solid rgb(205, 18, 234);
-            box-shadow:0 1px 2px -3px rgb(205, 18, 234);
-        }
         *{
             padding:0;
             margin:0;
         }
         body{
             width:100%;
-            height:auto;
-            
+            height:100vh;
             background:rgb(171, 67, 241);
-        }
-        .header{
-            width:99%;
-            height: 60px;
-            background:rgba(252, 252, 252);
-            padding:10px;
             display: flex;
-            justify-content: space-between;
+            flex-direction: column;
+            justify-content: center;
             align-items: center;
-
-            border-bottom:1px solid rgb(192, 185, 185);
-            box-shadow: 2px 2px 4px rgb(111, 104, 104);
         }
-        .logo{
-            background: url(./logo.png);
-            width:230px;
-            height: 60px;
         
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
-
-        }
-        .sp{
-            width: 200px;
-            height: 100%;
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-        }
-        .search_bar{
-            width:auto;
-            height: 60px;
-            margin-right: 30px;
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            
-            padding:2px;
-            
-        }
         .con{
-            width:100%;
-            height: auto;
-            margin-top: 10px;
+            width:90%;
+            height: 85%;
+            flex-direction: column;
             display: flex;
             justify-content: center;
-            /* align-items: center; */
-            padding: 10px;
-            
+            align-items: center;
+            border: 2px solid white;
         }
-        .menu{
-            border:2px solid rgb(241, 218, 253);
-            width: 20%;
-            height: 90vh;
-            margin: 1px;
-            /* margin-top: -832.5%; */
-            /* margin-left: -2px; */
+        .main{
+                width:60%;
+                height: 90%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                overflow-y: auto;
+                border-radius: 5px;
+                border: 1px solid rgba(231, 226, 226, 0.5);
+                box-shadow: 0 21px 42px -10px black;
+                margin-top: 0%;
+        }
+        
+        h1{
+            font-family: Arial, Helvetica, sans-serif;
+            color:white;
+            font-size: 44px;
+            padding: 5px;
+            border-bottom: 2px solid rgb(56, 52, 52);
+            box-shadow: 2px 2px 4px rgb(107, 98, 98,.8);
+            margin-top: 0%;
+
+        }#container{
+            height: 100%;
+            width: 100%;
             display: flex;
-            padding: 5px;
-            margin-left: -10px;
-            margin-right: 2px;
-            align-content: center;
-            transition: all .5s;
-            flex-direction: column;
-            border-radius: 20px;
-            background: rgb(162, 26, 236);
-        }
-        .maincon{
-            border:2px solid rgb(241, 218, 253);
-            width: 98%;
-             margin: 1px;
-             margin-left: 5px;
-             /* margin-left: 7px; */
-             transition: all .5s;
-           
-            border-radius: 20px;
-            height: auto;
-            padding: 5px;
-            background: rgb(162, 26, 236);
-        }
-        ul,li{
-            list-style: none;
-            font-size: 24px;
+            flex-wrap: wrap;
+            padding-top: 10px;
+            justify-content: center;
+            align-items: center;
+            row-gap: 10px;
+            column-gap: 10px;
+            border-radius: 5px;
         }
         li{
-            margin: 20px;
+            list-style: none;
+            margin: 5px;
             color:white;
-            width: auto;
+            font-size: 32px;
+
+            border-radius: 10px;
+            box-shadow: 0 2px 8px white;
         }
-        
-        ._Li{
-            width:auto;
-            height:40px;
-            display: flex;
-            padding: 5px;
-            align-items: center;
-        }
-        ._Li:hover{
-            color:black;
-        }
-        #_h1{
-            font-size: 20px;
-            margin-left: 20px;
-            display: none;
-            text-shadow: 2px 2px 4px rgb(87, 83, 83,.5);
-            transition: all .5s;
-            text-align: center;
-            width:auto;
-            overflow: hidden;
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        }
-       
-          
-        
-        /* #_h2{
-            font-size: 22px;
-            margin-right: -100px;
-            margin-left: 20px;
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-        }
-        #_home_1{
-            font-size: 42px;
-            transition: all .7s;
-            margin-right: -10px;
-            cursor: pointer;
-            
-        } */
-        #_home{
-            font-size: 42px;
-            transition: all .7s;
-            cursor: pointer;
-            
-        }
-        #_home:hover{
-            transform: scale(1.3);
-            color:black;
-            border-bottom: 2px solid black;
-        }
-        #add_ele_{
-            width:100%;
+        #calculations{
+            width:30%;
+            height: 90%;
+            border: 1px solid black;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100%;
-            flex-wrap: wrap;
-            border-radius: 20px;
-        }
-        #same{
-            width: 270px;
-            padding: 5px;
-            height: 400px;
-            display: flex;
-            justify-content: center;
             flex-direction: column;
-            align-items: center;
-            border-radius: 20px;
-            border:2px solid rgb(233, 13, 233);
         }
-        #div_12
-        {
-            width: 98%;
-            height: 67%;
-            border-radius: 20px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: linear-gradient(to top  ,red,rgb(49, 48, 48,.9));
-            
+        a{
+            color:white;
+            font-size: 44px;
         }
-        #inner{
-            width: 95%;
-            height: 95%;
-            border-radius: 20px;
-            margin: 0;
-            background-position: center;
-            background-size: cover;
-            border:1px solid white;
-        }
-        #content_2{
+        .gamer{
             width:90%;
-            height: 90px;
-            margin-top: -5px;
-            font-family: Amazon Ember, Arial;
-            display: flex;
-            justify-content: center;
-            align-items: left;
-            padding: 5px;
-            flex-direction: column;
-            margin-bottom: 0px;
-        }
-        .searcher{
-            width:100%;
-            height: 89vh;
-            position: fixed;
-            background: rgba(0,0,0,0.7);
-            margin: 30px;
-            display: flex;
-            justify-content: center;
+            height: 80%;
+            justify-content: space-evenly;
             align-items: center;
-            margin-left: 0px;display: none;
-            border-radius: 20px;
-            margin-top: 91px;
+            border: 1px solid black;
+            display: flex;
         }
-        #num_1{
-            position: absolute;
-            z-index: 0;
-            color: rgb(255, 6, 6);
-            margin-left: 13px;
-            margin-top: -5px;
-            font-size: 20px;
+        #cal{
+            width: 95%;
+            height: 80%;
+            overflow-y: auto;
+            border: 2px solid purple;
         }
-        #main_searcher{
-            width:700px;
-            background: transparent;
-            height: 70px;
-            border: none;
-            padding: 5px;
-            z-index: 100;
-            font-family: Amazon Ember, Arial;
-            text-align: center;
+        h3{
             color:white;
-            font-size: 42px;
-            outline: none;
-            border-bottom: 5px solid white;
+            font-size: 32px;
+            margin: 5px;
         }
     </style>
 </head>
 <body>
-    <div class="searcher">
-        <input id="main_searcher" type="text">
-    </div>
-    <div class="header">
-        <div class="logo"></div>
-        <div class="search_bar">
-            <input id="inpser" type="none">
-            <div class="sp">
-                <span id="searc" class="material-symbols-outlined">
-                search
-            </span>
-            <span id="searc_1" class="material-symbols-outlined">
-                menu
-            </span>
-            <div class="shop">
-                <h5 id="num_1">0</h5>
-                <span id="shop_cart"   class="material-symbols-outlined">
-               <a  id="desi" href="./shopping_cart_page.html"> shopping_cart</a>
-                </span>
-            </div>
-            </div>
-        </div>
-    </div>
     <div class="con">
-        <div class="menu">
-            <ul>
-                <li>
-                    <div class="_Li">
-                        <span id="_home" class="material-symbols-outlined">
-                        home
-                        </span>
-                        <h1 id="_h1" >Home</h1>
-                    </div>
-                </li>
-                 <li>
-                    <div class="_Li">
-                        <span  id="_home" class="material-symbols-outlined">
-                        storefront
-                        </span>
-                        <h1 id="_h1" >Store</h1>
-                    </div>
-                </li>
-                 <li>
-                    <div class="_Li">
-                        <span  id="_home" class="material-symbols-outlined">
-                        biotech
-                        </span>
-                        <h1 id="_h1" >Technologies</h1>
-                    </div>
-                </li>
-                 <li>
-                    <div class="_Li">
-                        <span  id="_home" class="material-symbols-outlined">
-                        category
-                        </span>
-                        <h1 id="_h1" >Categorys</h1>
-                    </div>
-                 <li>
-                <li>
-                    <div class="_Li">
-                        <span  id="_home" class="material-symbols-outlined">
-                        contact_mail
-                        </span>
-                        <h1 id="_h1" >Address</h1>
-                    </div>
-                 <li>
-                    
-            </ul>
+        <h1>Shopping cart List</h1>
+        <div class="gamer">
+            <div class="main">
+                <ul id="container"></ul>
+            </div>
+        <div id="calculations">
+            <ul id="cal"></ul>    
+            <h3 id="td">Total Amount = </h3>
         </div>
-        <div class="maincon">
-            <ul id="add_ele_">
-
-            </ul>
         </div>
     </div>
-
+    <a href="./index.html">Back to page</a>
 </body>
-</html>
-<script>
-
-    var arr_for_shopping_cart=[];
-    // localStorage.setItem("shopping_list",JSON.stringify(arr_for_shopping_cart));
-    
-    // console.log(get_list);
-    // get_list.push("game");
-    // console.log(get_list);
-    // localStorage.setItem("shopping_list",JSON.stringify(get_list));
-    function for_shift_menu()
-    {
-        document.querySelector('#searc_1').addEventListener("click",()=>{
-                    console.log("hello world");
-                    var a=document.querySelector('#searc_1');
-                    var menu=document.querySelector('.menu');
-                    var b=menu.style.marginLeft;
-                    console.log(b);
-                    
-                    if (b!="-21.2%"){
-                        menu.style.marginLeft="-21.2%";
-                        console.log(a.innerText);
-                        a.style.transform="rotate(180deg)";
-                        a.innerText="close";
-                    };
-                    if (b=="-21.2%"){
-                        menu.style.marginLeft="0%";
-                        console.log("true");
-                        a.style.transform="rotate(-180deg)";
-                        a.innerText="menu";
-                    };
-        });
-    };
-    for_shift_menu();
-    function mouse_enter()
-    {
-        var a=document.querySelectorAll('#_home');
-        var b=document.querySelectorAll('#_h1');
-            a.forEach((i,index)=>{
-                    i.addEventListener("mouseenter",function(){
-                            console.log("hello",i);
-                            var c=`${index}`;
-                            console.log("this is c: ",c);
-                            var we_get=(b[c]);
-                            we_get.style.display="block";
-                    });
-        });
-        a.forEach((i,index)=>{
-                    i.addEventListener("mouseleave",function(){
-                            
-                            var c=`${index}`;
-                            console.log("this is c: ",c);
-                            var we_get=(b[c]);
-                            we_get.style.display="none";
-                    });
-        });
-    };
-    mouse_enter();
-    function main_work()
-    {
-
-        // step-1 simple paste url 
-        // step-1 then using fetch .Fetch reponse
-        // step-1  make it response to change into json
-        // json change the format to human understanble.
-        // after then using then console it that result;
-        // this is beautiful link comes from this website  https://fakeapi.platzi.com/
-        const url ="https://api.escuelajs.co/api/v1/products";
-        fetch(url).then((res)=>{
-            return (res.json());
-        }).then((data)=>{
-            return (data);
-        }).then((result)=>{
-            return display_data(result);
-        })
-    };
-    
-    function display_data(api_data)
-    {   
-        var ul=document.querySelector('#add_ele_');
-        var len=api_data.length;
+    <script>
+        var get_list=JSON.parse(localStorage.getItem("shopping_list"));
+        console.log(get_list);
         
-        for(var i=0;i<len-1;i++)
-        {
-            var name_1=(api_data[i].title);
-            
-            var li=document.createElement("li");
-            var inner_div=document.createElement("li");
-            var content_1=document.createElement("li");
-            var h1=document.createElement("h4");
-            var company=document.createElement("h4");
-            var price=document.createElement("h4");
-            company.innerText="Fake_api_store";
-            h1.style.fontSize="18px";
-            var buttons_div=document.createElement('div');
-            buttons_div.style.marginTop="4px";
-            buttons_div.style.width="100%";
-            buttons_div.style.height="40px";
-            buttons_div.style.display="flex";
-            buttons_div.style.justifyContent="space-between";
-            buttons_div.style.alignItems="center";
+        var ul=document.querySelector('#container');
 
-            // buttons_div.style.border="1px solid black";
+        var url="https://api.escuelajs.co/api/v1/products";
+        console.log(get_list);
+        var main_list=[];
+        get_list.forEach((e)=>{
             
-            var addbu=document.createElement("button");
-            var minbu=document.createElement("button");
-            minbu.innerText="-";
-            minbu.id="minus";
-            minbu.style.width="30px";
-            minbu.style.height="30px";
-            minbu.style.padding="2px";
-            minbu.style.background="transparent";
-            minbu.style.color="white";
-            minbu.style.border="2px solid white";
-            minbu.style.outline="1px solid black";
-            minbu.style.fontSize="24px";
-            minbu.style.borderRadius="5px";
-            addbu.style.marginLeft="5px";
-            minbu.style.marginRight="5px";
-            addbu.innerText="+";
-            addbu.id="add_1";
-            
-            addbu.style.width="30px";
-            addbu.style.height="30px";
-            addbu.style.padding="2px";
-            addbu.style.background="transparent";
-            addbu.style.color="white";
-            addbu.style.border="2px solid white";
-            addbu.style.outline="1px solid black";
-            addbu.style.fontSize="24px";
-            addbu.style.borderRadius="5px";
-            buttons_div.append(addbu);
-            buttons_div.append(minbu);
-            company.style.fontSize="14px";
-            price.style.fontSize="21px";
-            price.innerText=(api_data[i].price)+" Rs";
-            h1.innerText=name_1;
-            content_1.appendChild(h1);
-            content_1.appendChild(company);
-            content_1.appendChild(price);
-            content_1.appendChild(buttons_div);
-            inner_div.id="inner";
+            if(!main_list.includes(e)){
+                main_list.push(e);
+            }
+        })
+        console.log(main_list);
+        main_list.forEach((e,i)=>{
+            console.log(e);
+            var li=document.createElement('li');
+            // li.innerText=e;
+            var image_div=document.createElement("div");
+            image_div.style.width="90%";
+            image_div.style.height="80%";
+            image_div.style.border="1px solid black";
+            image_div.style.margin="10px";
             
 
-            
-
-
-
-            content_1.id="content_2";
             if(i%9==0)
             {
-                inner_div.style.background="url(./shirt.webp)";
+                image_div.style.background="url(./shirt.webp)";
+                image_div.style.backgroundPosition="center";
+                image_div.style.backgroundSize="cover";
+                 image_div.style.backgroundRepeat="no-repeat";
             }
             
             else if(i%5==0)
             {
-                inner_div.style.background="url(./stylish_jacket.jpeg)";
+                image_div.style.background="url(./stylish_jacket.jpeg)";
+                image_div.style.backgroundPosition="center";
+            image_div.style.backgroundSize="cover";
+            image_div.style.backgroundRepeat="no-repeat";
             }
             else if(i%2==0)
             {
-                inner_div.style.background="url(./jacket.jpeg)";
+                image_div.style.background="url(./jacket.jpeg)";
+                image_div.style.backgroundPosition="center";
+            image_div.style.backgroundSize="cover";
+            image_div.style.backgroundRepeat="no-repeat";
             }
             else if(i%7==0)
             {
-                inner_div.style.background="url(./leather_belt.jpeg)";
+                image_div.style.background="url(./leather_belt.jpeg)";
+                image_div.style.backgroundPosition="center";
+            image_div.style.backgroundSize="cover";
+            image_div.style.backgroundRepeat="no-repeat";
             }
             else if(i%11==0)
             {
-                inner_div.style.background="url(./shoes-2.jpeg)";
+                image_div.style.background="url(./shoes-2.jpeg)";
+                image_div.style.backgroundPosition="center";
+            image_div.style.backgroundSize="cover";
+            image_div.style.backgroundRepeat="no-repeat";
             }
             else if(i%3==0 && i>2)
             {
-                inner_div.style.background="url(./shoes.jpg)";
-            }
-            
-            else if(i%3==0 && i<6)
-            {
-                inner_div.style.background="url(./shirt2.jpg)";
+                image_div.style.background="url(./shoes.jpg)";
+                image_div.style.backgroundPosition="center";
+                image_div.style.backgroundSize="cover";
+                image_div.style.backgroundRepeat="no-repeat";
             }
             else{
-                 inner_div.style.background="url(./shirt.webp)";
+                image_div.style.background="url(./shirt.webp)";
+                image_div.style.backgroundPosition="center";
+            image_div.style.backgroundSize="cover";
+            image_div.style.backgroundRepeat="no-repeat";
             }
-            inner_div.style.cursor="pointer";
-            inner_div.style.backgroundPosition="center";
-             inner_div.style.backgroundSize="cover";
 
-            var div_cret=document.createElement("li");
-            div_cret.appendChild(inner_div);
-
-            div_cret.id="div_12";
-            var arr_of_div=document.querySelectorAll('#div_12');
-            var arr_of_inner=document.querySelectorAll('#inner');
-            arr_of_div.forEach((ele,index)=>{
-                arr_of_div[index].style.overflow="hidden";
-                arr_of_div[index].addEventListener("mouseenter",function(){
-                    arr_of_inner[index].style.transform="scale(1.09)";
-                    arr_of_inner[index].style.transition="all .5s";
-                });
-                arr_of_div[index].addEventListener("mouseleave",function(){
-                    arr_of_inner[index].style.transform="scale(1)";
-                });
-            })
-
-            li.appendChild(div_cret);
-            li.appendChild(content_1);
-            li.id="same";
+            var h1=document.createElement("h4");
+            h1.style.fontSize="25px";
+            h1.style.color="black";
+            h1.innerText="Total items : ";
+            h1.id="has1";
+            li.style.display="flex";
+            li.style.flexDirection="column";
+            li.style.justifyContent="center";
+            li.style.alignItems="center";
+            li.style.width="250px";
+            li.appendChild(image_div);
+            li.appendChild(h1);
+            li.style.border="1px solid rgba(255,255,255,.8)";
+            li.style.height="300px";
             ul.appendChild(li);
-            
-        }
-        var get_list=JSON.parse(localStorage.getItem("shopping_list"));
-        console.log(get_list);
-        document.querySelector('#num_1').innerText=get_list.length;
-
-
-        var tryer=document.querySelectorAll('#add_1');
-        var minusbut=document.querySelectorAll('#minus');
-        tryer.forEach((e,index)=>{
-            // console.log(e,index);
-            e.addEventListener('click',()=>{
-                var targets=(e.parentNode.parentNode);
-                var lists=(targets.children);
-                e.style.transform="scale(1.1)";
-                setTimeout(()=>{
-                    e.style.transform="scale(1)";
-                },200);
-                
-                var name_of_items=(lists[0].innerText);
-                console.log(name_of_items);
-                //adding element in local storage list
-
-                get_list.push(name_of_items);
-                console.log(get_list);
-                
-                // craziest line
-                localStorage.setItem("shopping_list",JSON.stringify(get_list));
-                document.querySelector('#num_1').innerText=get_list.length;
-            });
         });
-        minusbut.forEach((e,index)=>{
-            // console.log(e,index);
-            e.addEventListener('click',()=>{
-                var targets=(e.parentNode.parentNode);
-                var lists=(targets.children);
-                console.log(lists);
-                e.style.transform="scale(1.1)";
-                setTimeout(()=>{
-                    e.style.transform="scale(1)";
-                },200);
-                
-                var name_of_items=(lists[0].innerText);
-                var c=0;
-                for(var i=0;i<get_list.length;i++)
+        var list_count=[];
+        function counter()
+        {
+            var h4=document.querySelectorAll('#has1');
+            console.log(h4);
+            for(var i=0;i<main_list.length;i++)
+            {
+                var count=0;
+                for(var j=0;j<get_list.length;j++)
                 {
-                    if (name_of_items==get_list[i]){
-                        c+=1;
-                    }
-                    if (c>=1){
-                        get_list.splice(i,1);
-                        break;
+                    if(i!=j)
+                    {
+                        if(main_list[i]==get_list[j])
+                        {
+                            count++;
+                            // console.log(main_list[i]);
+                        }
                     }
                 }
-                console.log(get_list);
-
+                count++;
+                list_count.push(count);
+                h4[i].innerText=h4[i].innerText+" "+count;
                 
-                // //adding element in local storage list
-
-                // get_list.push(name_of_items);
-                // console.log(get_list);
-                // // craziest line
-                localStorage.setItem("shopping_list",JSON.stringify(get_list));
-                document.querySelector('#num_1').innerText=get_list.length;
-            });
-        });
-
-    }
-    // function endcount_show_shop_icon()
-    // {
-    //     var get_list=JSON.parse(localStorage.getItem("shopping_list"));
-    //     console.log(get_list.length);
-    // }
-    // endcount_show_shop_icon();
-
-
-
-    main_work();
-    function clicking_sear()
-    {
+            }
+        }
+        counter();
+        var list_prices=[];
         
-        var a= document.querySelector('#searc');
-        a.addEventListener("click",function(){
-            if  (document.querySelector('.searcher').style.display=="flex")
-            {
-                document.querySelector('.searcher').style.display="none";
-            }
-            else{
-                document.querySelector('.searcher').style.display="flex";
-            }
+        function cal()
+        {
+            var ul=document.querySelector('#cal');
             
+            fetch(url).then((data)=> {
+                return data.json();
+            }).then((data)=>{
+                charter(data);
+            });
+            var Total=0;
+            function charter(data){
+                main_list.forEach((e,index)=>{
+                    var a;
+                    data.forEach(ele=>{
+                        if(e==ele.title)
+                        {
+                            console.log("this price"+ele.price);
+                            a=(ele.price*(list_count[index]));
+                            console.log(a);
+                            list_prices.push(ele.price);
+                            
+                        }
+                    });
+                    
+                    Total+=a;
+
+                    
+                });
+                
+                var td=document.querySelector('#td');
+                td.innerText= td.innerText+" "+Total;
+                
+                
+            };
             
-        });
-    };
-    clicking_sear();
-    
-</script>
+
+            main_list.forEach((e,index)=>{
+                var li=document.createElement("li");
+                li.style.width="90%";
+                li.style.display="flex";
+                li.style.border="2px solid black";
+                li.style.justifyContent="center";
+                li.style.alignItems="center";
+                li.style.height="50px";
+                li.style.fontSize="24px";
+                li.style.boxShadow="none";
+                li.style.color="black";
+                li.innerText= e+"  :  "+list_count[index];
+                console.log(list_count[index]);
+                ul.appendChild(li);
+            })
+
+        }
+        cal();
+       
+    </script>
+</html>
