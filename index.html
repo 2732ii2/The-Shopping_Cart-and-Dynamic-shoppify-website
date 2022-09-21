@@ -379,7 +379,17 @@
 <script>
 
     var arr_for_shopping_cart=[];
-    // localStorage.setItem("shopping_list",JSON.stringify(arr_for_shopping_cart));
+    var max_thing=0;
+    
+    if (max_thing==0)
+    {
+        localStorage.setItem("shopping_list",JSON.stringify(arr_for_shopping_cart));
+        max_thing==1;
+    }
+    if(max_thing==1)
+    {
+        // localStorage.setItem("shopping_list",JSON.stringify(arr_for_shopping_cart));
+    }
     
     // console.log(get_list);
     // get_list.push("game");
